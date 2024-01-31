@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Lines&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+@media (max-width: 768px) {
+    /* CSS for screens up to 768px wide */
+}
+
+@media (max-width: 600px) {
+    /* CSS for screens up to 576px wide (typically mobile) */
+}
+
 body {
     font-size: 16px;
  }
