@@ -1,46 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Lines&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
-@media (max-width: 768px) {
-    /* CSS for screens up to 768px wide */
-}
 
-@media (max-width: 600px) {
-    /* CSS for screens up to 576px wide (typically mobile) */
-}
-
+/* Common styles */
 body {
     font-size: 16px;
- }
- 
- @media only screen and (max-width: 600px) {
-    body {
-       font-size: 14px;
-    }
- }
- 
-* {
-    margin: 0;
-    padding: 0;
-    color: azure;
-}
-.copyright {
-    text-align: center;
-    font-size: 15px;
-    font-family: 'Salsa', cursive;
-}
-body {
     background-color: rgb(0, 0, 33);
     font-family: 'Poppins';
-}
-
-.left {
+    color: azure;
+    margin: 0;
+    padding: 0;
 }
 
 nav {
     font-family: 'Rubik Lines';
     display: flex;
-
     justify-content: space-around;
     align-items: center;
     height: 90px;
@@ -50,13 +24,23 @@ nav {
 nav ul {
     display: flex;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
     list-style: none;
     margin: 0 23px;
     font-size: 15px;
+}
 
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: rgb(233, 111, 111);
 }
 
 .firstSection {
@@ -68,7 +52,6 @@ nav ul li {
 
 .firstSection>div {
     width: 30%;
-
 }
 
 .leftSection {
@@ -84,15 +67,6 @@ nav ul li {
 
 .purple {
     color: rgb(238, 12, 12);
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-}
-
-nav ul li a:hover {
-    color: rgb(233, 111, 111);
 }
 
 .secondSection {
@@ -123,6 +97,41 @@ hr {
     border: 0;
     border-bottom: 1px solid #ccc;
     margin: 20px auto;
+}
 
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    nav ul li {
+        margin: 0 10px; /* Adjusting margin for smaller screens */
+        font-size: 14px; /* Decreasing font size for smaller screens */
+    }
+}
 
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px; /* Decreasing font size for smaller screens */
+    }
+
+    .firstSection {
+        flex-direction: column; /* Stacking sections vertically on smaller screens */
+        text-align: center; /* Center aligning text on smaller screens */
+        margin: 50px 0; /* Adjusting margin for smaller screens */
+    }
+
+    .firstSection>div {
+        width: 100%; /* Setting width to 100% for smaller screens */
+        margin-bottom: 30px; /* Adding space between sections on smaller screens */
+    }
+
+    .rightSection img {
+        width: 60%; /* Decreasing image size for smaller screens */
+    }
+
+    .first iframe {
+        margin: 30px auto; /* Centering iframe on smaller screens */
+    }
+
+    .first p {
+        margin-left: 0; /* Removing left margin for paragraphs on smaller screens */
+    }
 }
