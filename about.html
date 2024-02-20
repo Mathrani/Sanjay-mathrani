@@ -8,68 +8,89 @@
 </head>
 <link rel="stylesheet" href="style.css">
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap');
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-        font-family: 'Instrument Serif', serif;
-        background-color: rgb(27, 45, 105);
-    }
+body {
+    font-family: 'Instrument Serif', serif;
+    background-color: rgb(27, 45, 105);
+}
 
-    footer {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        background: linear-gradient(to right, #00093c, #2d0b00);
-        color: #fff;
-        padding: 100px 0 30px;
-        border-bottom-left-radius: 125px;
-        font-size: 13px;
-        line-height: 20px;
-    }
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-bottom-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+}
 
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.logo {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 15px;
+}
+
+.col ul li a {
+    text-decoration: none;
+    width: 100px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
     .row {
-        width: 85%;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: space-between;
+        width: 90%; /* Adjusting row width for smaller screens */
     }
-
+    
     .col {
-        flex-basis: 25%;
-        padding: 10px;
+        flex-basis: 45%; /* Adjusting column width for smaller screens */
     }
+}
 
-    .logo {
-        width: 100%;
-        margin-bottom: 30px;
+@media only screen and (max-width: 480px) {
+    .row {
+        width: 100%; /* Adjusting row width for even smaller screens */
     }
-
-    hr {
-        width: 90%;
-        border: 0;
-        border-bottom: 1px solid #ccc;
-        margin: 20px auto;
-
-
+    
+    .col {
+        flex-basis: 100%; /* Setting column width to full width for smaller screens */
+        margin-bottom: 20px; /* Adding margin bottom for better spacing */
     }
+}
 
-    .copyright {
-        text-align: center;
-        font-size: 15px;
-    }
-
-    .col ul li a {
-        text-decoration: none;
-        width: 100px;
-    }
 </style>
 
 <body>
@@ -81,7 +102,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html" class="active">About</a></li>
                     <li><a href="#">Sevices</a></li>
-                    <li><a href="yt.html">Youtbe</a></li>
+                    <li><a href="yt.html">Youtube</a></li>
                 </ul>
             </div>
         </nav>
